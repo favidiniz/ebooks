@@ -39,10 +39,10 @@ R.place(cv, p1, 310, 800, 1.0, 5)
 R.place(cv, p2, 770, 975, 1.0, -4)
 
 # ---- tarjeta resumen
-lines = [[("Reconocimos", 0), ("nuestra", 0), ("sed,", 1)],
-         [("dejamos", 0), ("que", 0), ("Él", 1), ("nos", 0)],
-         [("encontrara", 0), ("y", 0), ("volvimos", 0)],
-         [("enviadas", 1)]]
+lines = [[("Un", 0), ("día", 0), ("para", 0), ("prepararnos", 0)],
+         [("a", 0), ("dar", 0), ("nuestro", 0), ("sí", 1)],
+         [("y", 0), ("asociarnos", 0), ("al", 0)],
+         [("Regnum", 1), ("Christi", 1)]]
 sans, serif = R.F("Montserrat.ttf", 54, 650), R.F("EBGaramond-Italic.ttf", 74, 500)
 space = sans.getlength(" ")
 lw = [sum((serif if a else sans).getlength(w) for w, a in ln) + space * (len(ln) - 1) for ln in lines]
