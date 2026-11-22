@@ -183,16 +183,15 @@ def moment_card(words, label, t, style):
         if cur and cw + add > 820: lines.append((cur, cw)); cur, cw = [], 0; add = it[3]
         cur.append(it); cw += add
     if cur: lines.append((cur, cw))
-    padx, top, lh = 60, 110, 122
+    padx, top, lh = 60, 34, 122
     cwid = int(max(lw for _, lw in lines) + padx * 2)
     cwid = max(cwid, 520)
-    chei = int(top + lh * len(lines) + 40)
+    chei = int(top + lh * len(lines) + 44)
     card = Image.new("RGBA", (cwid, chei), (0, 0, 0, 0))
     d = ImageDraw.Draw(card)
     d.rounded_rectangle([0, 0, cwid - 1, chei - 1], radius=34, fill=bg + (255,))
     if style == 1:
         d.rounded_rectangle([10, 10, cwid - 11, chei - 11], radius=26, outline=GOLD + (150,), width=2)
-    tracked(d, (cwid / 2, 66), f"MOMENTO {label}", LABEL(), lab + (255,), 7)
     k = 0; unders = []
     for li, (its, lw) in enumerate(lines):
         x = cwid / 2 - lw / 2; y = top + lh * (li + 1) - 26
@@ -340,7 +339,7 @@ def draw_end(t, dur):
     cv = _ENDBG.copy(); d = ImageDraw.Draw(cv, 'RGBA')
     # polvo dorado
     rnd = random.Random(7)
-    for k in range(46):
+    for k in range(0):
         x0, y0, sp, r = rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(18, 60), rnd.uniform(1.5, 4.5)
         y = (y0 - t * sp) % H; a = int(120 * (0.5 + 0.5 * math.sin(t * 3 + k)))
         d.ellipse([x0 - r, y - r, x0 + r, y + r], fill=GOLD + (a,))
@@ -352,13 +351,13 @@ def draw_end(t, dur):
         s = back_out(p, 1.7); rot = (1 - ease_out(p)) * -14
         # anillo dorado que se dibuja
         pr = ease_io((t - 0.3) / 0.8)
-        if pr > 0:
+        if False:
             R = 290
             d.arc([W / 2 - R, cy_e - R, W / 2 + R, cy_e + R], -90, -90 + 360 * pr, fill=GOLD + (230,), width=4)
         place(cv, im, W / 2, cy_e, s, rot, ease_out(p), shadow=True)
         # destello que cruza el escudo
         g = (t - 1.0) / 0.6
-        if 0 < g < 1 and s > 0.9:
+        if False:
             band = Image.new("L", im.size, 0); bd = ImageDraw.Draw(band)
             x = -im.width * 0.5 + g * im.width * 2
             bd.polygon([(x, 0), (x + 70, 0), (x - 60, im.height), (x - 130, im.height)], fill=200)
