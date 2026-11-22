@@ -80,7 +80,7 @@ MOMENTS = [
 ]
 # Notas a mano: plano -> (texto, (x,y) texto, (x,y) punta de flecha, curvatura)
 NOTES = {
-    0:  ("¡todas juntas!", (330, 560), (520, 830), -0.35),
+    0:  ("¡todas juntas!", (330, 790), (470, 935), -0.35),
     1:  ("la bendición", (760, 420), (520, 640), 0.35),
     8:  ("escuchando con el corazón", (420, 520), (760, 860), -0.3),
     13: ("recorriendo la casa", (380, 560), (640, 960), 0.3),
@@ -294,10 +294,10 @@ def draw_open(canvas, t, dur):
     tracked(d, (cw / 2, 372 + (1 - a3) * 14), "21 . 11 . 2026", F("Montserrat.ttf", 40, 600), GOLD + (int(255 * a3),), 10)
     s = back_out(t / 0.5) if t < 0.5 else 1.0
     out = ease_io((t - (dur - 0.2)) / 0.2)
-    place(canvas, card, W / 2, 1400 + (1 - ease_out(t / 0.5)) * 80, s * (1 - 0.1 * out), -2.0, 1 - out)
+    place(canvas, card, W / 2, 470 - (1 - ease_out(t / 0.5)) * 80, s * (1 - 0.1 * out), -2.0, 1 - out)
     if t > 1.2:
         d2 = ImageDraw.Draw(canvas, 'RGBA')
-        for j, (x, y, r0) in enumerate([(W / 2 + 430, 1180, 30), (W / 2 + 470, 1240, 15), (W / 2 - 440, 1620, 20)]):
+        for j, (x, y, r0) in enumerate([(W / 2 + 430, 250, 30), (W / 2 + 470, 310, 15), (W / 2 - 440, 690, 20)]):
             ph = (t - 1.2 - j * 0.2) * 4
             if ph > 0: star(d2, x, y, r0 * (0.55 + 0.45 * abs(math.sin(ph))) * (1 - out), GOLD + (240,))
 
