@@ -14,9 +14,10 @@ cv = R.end_bg(0)
 d = ImageDraw.Draw(cv, "RGBA")
 
 # ---- cabecera: escudo + REGNUM CHRISTI (como en el feed)
-esc = R.asset("escudo").copy(); esc.thumbnail((70, 70), Image.LANCZOS)
-R._paste(cv, esc, X0, 236)
-R.tracked(d, (X0 + esc.width + 18, 284), "REGNUM CHRISTI", M(30, 500), R.WHITE + (255,), 5, anchor_mid=False)
+esc = R.asset("escudo").copy(); esc.thumbnail((96, 96), Image.LANCZOS)
+wm = R.asset("logo").copy(); wm.thumbnail((400, 78), Image.LANCZOS)   # letras originales del logo
+R._paste(cv, esc, X0, 226)
+R._paste(cv, wm, X0 + esc.width + 22, int(226 + esc.height / 2 - wm.height / 2))
 
 # ---- statement
 bs = 112
