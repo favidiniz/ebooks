@@ -81,7 +81,7 @@ MOMENTS = [
 # Notas a mano: plano -> (texto, (x,y) texto, (x,y) punta de flecha, curvatura)
 NOTES = {
     0:  ("¡todas juntas!", (330, 790), (470, 935), -0.35),
-    1:  ("la bendición", (760, 420), (520, 640), 0.35),
+    1:  ("la Eucaristía", (740, 420), (520, 640), 0.35),
     8:  ("escuchando con el corazón", (420, 520), (760, 860), -0.3),
     13: ("recorriendo la casa", (380, 560), (640, 960), 0.3),
     16: ("¡hola!", (220, 560), (300, 860), -0.4),
