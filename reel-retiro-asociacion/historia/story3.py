@@ -16,16 +16,17 @@ cv = R.end_bg(0)
 d = ImageDraw.Draw(cv, "RGBA")
 
 # ---- cabecera: escudo + letras originales del logo
-esc = R.asset("escudo").copy(); esc.thumbnail((92, 92), Image.LANCZOS)
-wm = R.asset("logo").copy(); wm.thumbnail((400, 74), Image.LANCZOS)
-R._paste(cv, esc, X0, 250)
-R._paste(cv, wm, X0 + esc.width + 22, int(250 + esc.height / 2 - wm.height / 2))
+# logo oficial completo, tal cual (sin separar ni recomponer)
+logo = R.asset("logo_completo").copy()
+logo = logo.crop(logo.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
+logo.thumbnail((400, 170), Image.LANCZOS)
+R._paste(cv, logo, X0, 236)
 
 # ---- titular
 bs = 120
 while M(bs, 900).getlength("NOS PREPARAMOS") > CW: bs -= 2
 big = M(bs, 900)
-y1 = 500
+y1 = 560
 R.atext(d, (X0, y1), "NOS PREPARAMOS", font=big, fill=WHITE + (255,), anchor="ls")
 y2 = y1 + int(bs * 1.28)
 R.atext(d, (X0, y2), "PARA DECIR", font=big, fill=WHITE + (255,), anchor="ls")
@@ -40,7 +41,7 @@ R.tracked(d, (X0, y2 + 92), "RETIRO DE ASOCIACIÓN  ·  21.11.2026", M(32, 600),
 
 # ---- dos fotos alineadas a la retícula
 gap = 24
-pw = (CW - gap) // 2; ph = int(pw * 1.75)
+pw = (CW - gap) // 2; ph = int(pw * 1.62)
 py = y2 + 150
 def photo(path, cy_frac):
     im = Image.open(path).convert("RGB")
