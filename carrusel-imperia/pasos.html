@@ -338,7 +338,7 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .p2 .kick{position:absolute;left:72px;top:170px}
 .p2 h2{position:absolute;left:72px;top:205px;font-size:130px;line-height:1}
 .p2 .sub{position:absolute;left:72px;top:360px;font-size:28px;color:#CFC6B4;max-width:840px;line-height:1.4}
-.p2 .phone2{position:absolute;left:120px;right:120px;top:470px;height:720px;border-radius:48px;background:#121110;border:2px solid rgba(201,170,92,.35);box-shadow:0 50px 100px -40px rgba(0,0,0,.8),0 0 60px rgba(201,170,92,.12);overflow:hidden}
+.p2 .phone2{position:absolute;left:120px;right:120px;top:460px;height:770px;border-radius:48px;background:#121110;border:2px solid rgba(201,170,92,.35);box-shadow:0 50px 100px -40px rgba(0,0,0,.8),0 0 60px rgba(201,170,92,.12);overflow:hidden}
 .p2 .ph-top{display:flex;align-items:center;gap:16px;padding:26px 30px;border-bottom:1px solid rgba(255,255,255,.08)}
 .p2 .ph-top .av{width:70px;height:70px;border-radius:50%;background:#0C0B09 url(assets/logo.png) center/86% no-repeat;border:2px solid var(--gold)}
 .p2 .ph-top b{font-size:28px;font-weight:700}
@@ -361,6 +361,15 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .p3 .kick{position:absolute;left:72px;top:170px}
 .p3 h2{position:absolute;left:72px;top:205px;font-size:124px;line-height:1}
 .p3 .sub{position:absolute;left:72px;top:345px;font-size:28px;color:#3C372E}
+.p3 .sizes{position:absolute;left:60px;right:60px;top:440px;display:grid;grid-template-columns:1fr 1fr;gap:22px 22px}
+.p3 .sz{background:rgba(255,255,255,.6);border:1px solid rgba(143,112,48,.2);border-radius:26px;padding:16px 20px 20px;display:flex;flex-direction:column;align-items:center}
+.on.p3 .sz{animation:up .9s var(--ease-out) var(--d) both}
+.p3 .sz .ph{height:205px;width:100%;display:flex;align-items:flex-end;justify-content:center;position:relative}
+.p3 .sz .ph::after{content:"";position:absolute;bottom:-6px;left:20%;right:20%;height:24px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,45,20,.3),transparent)}
+.p3 .sz img{position:relative;z-index:1}
+.on.p3 .sz img{animation:pop .8s var(--ease-out) calc(var(--d) + .25s) both}
+.p3 .sz b{font-size:28px;font-weight:800;margin-top:14px;color:var(--ink)}
+.p3 .sz small{font-size:20px;color:var(--muted);margin-top:2px}
 .p3 .beds{position:absolute;left:60px;right:60px;top:470px;height:560px;display:flex;justify-content:space-between;align-items:flex-end}
 .p3 .bd{display:flex;flex-direction:column;align-items:center;gap:22px}
 .p3 .rect{height:400px;border-radius:22px;border:3px solid var(--gold);position:relative;transform-origin:bottom;
@@ -371,12 +380,12 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .p3 .rect::before{content:"";position:absolute;top:16px;left:14px;right:14px;height:44px;display:block;background:radial-gradient(closest-side,#fff 92%,transparent) left/var(--pw) 100% repeat-x}
 .p3 .bd b{font-size:26px;font-weight:800;letter-spacing:.04em;color:var(--ink)}
 .p3 .bd small{font-size:20px;color:var(--muted);margin-top:-14px;text-align:center}
-.p3 .avail{position:absolute;left:72px;right:72px;top:1095px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.p3 .avail{position:absolute;left:72px;right:72px;top:1150px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .p3 .avail div{border-top:2px solid var(--gold);padding-top:14px;font-size:22px;line-height:1.4;color:#3C372E}
 .p3 .avail b{display:block;font-size:20px;letter-spacing:.18em;color:var(--gold-lo);margin-bottom:4px}
 
 .p4 .kick{position:absolute;left:72px;top:170px}
-.p4 h2{position:absolute;left:72px;top:205px;font-size:124px;line-height:1}
+.p4 h2{position:absolute;left:72px;top:215px;font-size:104px;line-height:1}
 .p4 .road{position:absolute;left:0;right:0;top:470px;height:420px}
 .p4 .road svg.rt{position:absolute;inset:0;overflow:visible}
 .p4 .rt .bg{fill:none;stroke:rgba(201,170,92,.18);stroke-width:4;stroke-dasharray:12 14}
@@ -389,6 +398,8 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .p4 .pin svg{width:70px;height:70px}
 .p4 .home{left:935px;top:100px}
 .p4 .fab{left:40px;top:220px}
+.p4 .pin.more svg{width:52px;height:52px;opacity:.75}
+.p4 .nat{position:absolute;left:300px;top:-30px;font-size:18px;font-weight:700;letter-spacing:.2em;color:var(--gold)}
 .p4 .ok{position:absolute;left:985px;top:70px;width:56px;height:56px;border-radius:50%;background:#4CAF6A;display:grid;place-items:center;z-index:5}
 .p4 .ok svg{width:32px;height:32px}
 .p4 .msg{position:absolute;left:72px;right:72px;top:950px;font-size:30px;line-height:1.4;color:var(--ivory)}
@@ -448,7 +459,7 @@ body.render #renderHost{display:block}
 <div class="page">
   <header>
     <h1>Tu próximo colchón está a <em>3 pasos</em>.</h1>
-    <p>Tercer carrusel para Colchones Imperia · 4 slides 1080×1350 (4:5). Tema: cómo comprar. Convierte su mejor argumento —“¡Llegamos a donde estés!”— en un proceso simple.</p>
+    <p>Tercer carrusel para Colchones Imperia · 4 slides 1080×1350 (4:5). Tema: cómo comprar. Explica cómo llegar a un Imperia: de la fábrica a las tiendas aliadas de todo el país.</p>
   </header>
   <div class="tabs" role="group" aria-label="Modo de vista">
     <button id="bPhone" aria-pressed="true">Vista Instagram</button>
@@ -464,20 +475,20 @@ body.render #renderHost{display:block}
         <div class="counter" id="ctr">1/4</div>
       </div>
       <div class="dots" id="dots"></div>
-      <div class="capt"><b>colchonesimperia</b> Cambiar de colchón nunca fue tan fácil 👑 1. Escríbenos 2. Elige tu medida 3. Recíbelo en casa 🚚 Escríbenos <b>QUIERO</b> y empezamos hoy.</div>
+      <div class="capt"><b>colchonesimperia</b> Cambiar de colchón nunca fue tan fácil 👑 1. Escríbenos 2. Elige tu medida 3. Encuéntralo en tu tienda aliada más cercana 📍 Escríbenos <b>QUIERO</b> y te orientamos.</div>
     </div>
     <div class="notes">
       <div class="note">
         <h3>Concepto</h3>
-        <p>Su post con más interacción fue el de envíos. Este carrusel lo lleva más lejos: quita la fricción de comprar mostrando el proceso completo en 3 pasos. La palabra clave <b>QUIERO</b> permite medirlo aparte de TRONO y RENUEVA.</p>
+        <p>Su post con más interacción fue el de distribución. Este carrusel lo lleva más lejos: muestra en 3 pasos cómo pasar de la duda a tener un Imperia, a través de su red de tiendas aliadas. La palabra clave <b>QUIERO</b> permite medirlo aparte de TRONO y RENUEVA.</p>
       </div>
       <div class="note">
         <h3>Guion de slides</h3>
         <ol>
           <li><b>Gancho</b> <span>tres pasos que aparecen unidos por el hilo dorado</span></li>
           <li><b>Escríbenos</b> <span>chat animado con mensajes y “escribiendo…”</span></li>
-          <li><b>Elige tu medida</b> <span>cuatro camas que crecen de Individual a King, con la línea disponible</span></li>
-          <li><b>Recíbelo</b> <span>el camión Imperia recorre la ruta hasta tu casa + CTA QUIERO</span></li>
+          <li><b>Elige tu medida</b> <span>foto real del Premium en sus cuatro medidas, de Individual a King</span></li>
+          <li><b>Encuéntralo</b> <span>el camión Imperia sale de la fábrica, llega a una tienda aliada y se encienden más tiendas en el mapa + CTA QUIERO</span></li>
         </ol>
       </div>
       <div class="note">
@@ -505,7 +516,7 @@ body.render #renderHost{display:block}
   <div class="steps">
     <div class="st a-pop" style="--d:.9s"><i>1</i><span>Escríbenos</span></div>
     <div class="st a-pop" style="--d:1.3s"><i>2</i><span>Elige</span></div>
-    <div class="st a-pop" style="--d:1.7s"><i>3</i><span>Recíbelo</span></div>
+    <div class="st a-pop" style="--d:1.7s"><i>3</i><span>Encuéntralo</span></div>
   </div>
   <div class="shadow a-fade" style="--d:2.4s"></div>
   <div class="mw"><div class="float"><img class="mat" style="position:relative;width:100%" src="assets/m7213.webp" alt=""></div></div>
@@ -526,7 +537,7 @@ body.render #renderHost{display:block}
       <div class="typing" style="--d:2.4s"><i></i><i></i><i></i></div>
       <div class="bub im" style="--d:3.5s">¡Hola! Te va perfecto el <b>San Remo Pillow top</b>: equilibrio entre suavidad y firmeza.</div>
       <div class="typing" style="--d:4.1s"><i></i><i></i><i></i></div>
-      <div class="bub im" style="--d:5.2s">¿A qué ciudad te lo enviamos?</div>
+      <div class="bub im" style="--d:5.2s">¿En qué ciudad estás? Te indicamos la tienda aliada más cercana.</div>
     </div>
   </div>
 </section>
@@ -536,12 +547,12 @@ body.render #renderHost{display:block}
   <div class="silk"></div>
   <div class="kick kicker a-fade" style="--d:.1s">Paso 2</div>
   <h2 class="serif"><span class="line-mask"><span class="a-rise" style="--d:.2s"><span class="it goldtxt" style="--d:1s">Elige tu medida.</span></span></span></h2>
-  <div class="sub a-up" style="--d:.5s">Hay un tamaño para cada reino.</div>
-  <div class="beds">
-    <div class="bd"><div class="rect" style="width:150px;--d:.9s;--pw:100%"></div><b class="a-up" style="--d:1.3s">Individual</b><small class="a-fade" style="--d:1.5s">Para ti</small></div>
-    <div class="bd"><div class="rect" style="width:205px;--d:1.15s;--pw:50%"></div><b class="a-up" style="--d:1.55s">Matrimonial</b><small class="a-fade" style="--d:1.75s">Para dos</small></div>
-    <div class="bd"><div class="rect" style="width:232px;--d:1.4s;--pw:50%"></div><b class="a-up" style="--d:1.8s">Queen</b><small class="a-fade" style="--d:2s">Más espacio</small></div>
-    <div class="bd"><div class="rect" style="width:290px;--d:1.65s;--pw:50%"></div><b class="a-up" style="--d:2.05s">King</b><small class="a-fade" style="--d:2.25s">El trono completo</small></div>
+  <div class="sub a-up" style="--d:.5s">Hay un tamaño para cada reino. <span style="color:#8B8375;font-size:22px">(Proporciones ilustrativas)</span></div>
+  <div class="sizes">
+    <div class="sz" style="--d:.9s"><div class="ph"><img src="assets/m7166.webp" alt="" style="width:46%"></div><b>Individual</b><small>Para ti</small></div>
+    <div class="sz" style="--d:1.15s"><div class="ph"><img src="assets/m7166.webp" alt="" style="width:66%"></div><b>Matrimonial</b><small>Para dos</small></div>
+    <div class="sz" style="--d:1.4s"><div class="ph"><img src="assets/m7166.webp" alt="" style="width:78%"></div><b>Queen</b><small>Más espacio</small></div>
+    <div class="sz" style="--d:1.65s"><div class="ph"><img src="assets/m7166.webp" alt="" style="width:96%"></div><b>King</b><small>El trono completo</small></div>
   </div>
   <div class="avail">
     <div class="a-up" style="--d:2.6s"><b>SAN REMO Y THERAPY</b>Individual y matrimonial.</div>
@@ -553,16 +564,20 @@ body.render #renderHost{display:block}
 <section class="slide dark p4">
   <div class="grain"></div>
   <div class="kick kicker a-fade" style="--d:.1s">Paso 3</div>
-  <h2 class="serif"><span class="line-mask"><span class="a-rise" style="--d:.2s"><span class="it goldtxt" style="--d:1s">Recíbelo en casa.</span></span></span></h2>
+  <h2 class="serif"><span class="line-mask"><span class="a-rise" style="--d:.2s"><span class="it goldtxt" style="--d:1s">Encuéntralo cerca de ti.</span></span></span></h2>
   <div class="road">
     <svg class="rt" viewBox="0 0 1080 420"><path class="bg" d="M 150 370 C 360 370 390 160 580 190 S 760 330 880 175"/><path class="fg" pathLength="1" d="M 150 370 C 360 370 390 160 580 190 S 760 330 880 175"/></svg>
     <div class="pin fab a-fade" style="--d:.5s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3 21V10l5 3V10l5 3V6l8 4v11z"/><path d="M3 21h18"/></svg>ZONA<br>INDUSTRIAL 3</div>
-    <div class="pin home a-fade" style="--d:.7s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3 11l9-7 9 7v10H3z"/><path d="M10 21v-6h4v6"/></svg>TU CASA</div>
+    <div class="pin home a-fade" style="--d:.7s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3.5 9.5L5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg>TIENDA<br>ALIADA</div>
     <div class="truck"><svg viewBox="0 0 120 80"><rect x="4" y="14" width="68" height="44" rx="6" fill="#EBD7A0"/><path d="M72 28h24l18 18v12H72z" fill="#C9AA5C"/><path d="M80 32h13l11 11H80z" fill="#17140F"/><circle cx="24" cy="62" r="11" fill="#0C0B09" stroke="#EBD7A0" stroke-width="4"/><circle cx="94" cy="62" r="11" fill="#0C0B09" stroke="#EBD7A0" stroke-width="4"/><text x="38" y="42" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="16" font-weight="700" fill="#0C0B09">IMPERIA</text></svg></div>
+    <div class="pin more a-pop" style="left:470px;top:40px;--d:4.3s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3.5 9.5L5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg></div>
+    <div class="pin more a-pop" style="left:690px;top:300px;--d:4.55s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3.5 9.5L5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg></div>
+    <div class="pin more a-pop" style="left:300px;top:110px;--d:4.8s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.5" stroke-linejoin="round"><path d="M3.5 9.5L5 4h14l1.5 5.5"/><path d="M3.5 9.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5c0 1.4 1.1 2.5 2.4 2.5s2.4-1.1 2.4-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></svg></div>
+    <div class="nat a-fade" style="--d:5s">+ TIENDAS ALIADAS EN TODO EL PAÍS</div>
     <div class="ok a-pop" style="--d:3.9s"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
   </div>
-  <div class="msg a-up" style="--d:2.4s"><b>¡Llegamos a donde estés!</b> Tenemos aliados a nivel nacional, porque valoramos a nuestros clientes.</div>
-  <div class="kw a-up" style="--d:3.4s">Empieza hoy: escríbenos <b>QUIERO</b></div>
+  <div class="msg a-up" style="--d:2.4s"><b>¡Llegamos a donde estés!</b> Distribuimos a tiendas aliadas en todo el país. Te decimos cuál te queda más cerca.</div>
+  <div class="kw a-up" style="--d:3.4s">Escríbenos <b>QUIERO</b> por DM</div>
 </section>
 </template>
 
