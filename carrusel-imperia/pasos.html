@@ -595,7 +595,7 @@ body.render #renderHost{display:block}
       // header
       const light = s.classList.contains('light') || s.classList.contains('s7');
       const h = document.createElement('div'); h.className='hdr a-fade'; h.style.setProperty('--d','0s');
-      h.innerHTML = `<div class="brand"><img src="assets/logo.png" alt="Colchones Imperia"></div><div class="num">${String(i+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}</div>`;
+      h.innerHTML = `<div class="brand"><img src="assets/logo.png" alt="Colchones Imperia"></div>`;
       if(i!==0) s.prepend(h);
       // thread
       const y0 = EDGE[i], y1 = EDGE[i+1];
