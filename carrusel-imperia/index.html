@@ -35,6 +35,8 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 
 .hdr{position:absolute;top:56px;left:72px;right:72px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:700;letter-spacing:.22em;z-index:20}
 .hdr .brand{display:flex;align-items:center;gap:14px}
+.hdr .brand img{height:50px;display:block}
+.light .hdr .brand img,.s7 .hdr .brand img{filter:brightness(.82) saturate(1.2)}
 .hdr .brand i{display:block;width:34px;height:2px;background:var(--gold)}
 .hdr .num{font-weight:600;letter-spacing:.12em;color:var(--gold)}
 .light .hdr{color:var(--ink)}
@@ -233,6 +235,9 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .s9 .card p .serif{font-size:44px}
 .s9 .chips{position:absolute;left:72px;right:72px;top:1010px;justify-content:center}
 .s9 .foot{position:absolute;left:0;right:0;bottom:90px;text-align:center}
+.s9 .deliv{position:absolute;left:72px;right:72px;top:1105px;display:flex;justify-content:center;align-items:center;gap:16px;font-size:24px;font-weight:600;color:var(--ivory)}
+.s9 .deliv svg{width:40px;height:40px;flex:none}
+.s9 .deliv b{color:var(--gold-hi)}
 .s9 .foot .serif{font-size:46px;color:var(--gold-hi)}
 .s9 .foot small{display:block;margin-top:12px;font-size:18px;letter-spacing:.2em;color:#8B8375}
 
@@ -296,7 +301,7 @@ body.render #renderHost{display:block}
   </div>
   <div class="layout">
     <div class="phone">
-      <div class="top"><div class="av"></div><div class="nm">Colchones Imperia<small>Patrocinado · Catálogo 2026</small></div></div>
+      <div class="top"><div class="av"></div><div class="nm">colchonesimperia<small>Zona Industrial 3</small></div></div>
       <div class="viewport" id="vp">
         <div class="track" id="track"></div>
         <button class="navb prev" id="prev" aria-label="Anterior">‹</button>
@@ -304,12 +309,16 @@ body.render #renderHost{display:block}
         <div class="counter" id="ctr">1/9</div>
       </div>
       <div class="dots" id="dots"></div>
-      <div class="capt"><b>Colchones Imperia</b> Dormir bien es un derecho. Dormir como realeza, una elección 👑 Desliza y encuentra tu trono → ¿Ya sabes cuál es el tuyo? Escríbenos <b>TRONO</b> por DM.</div>
+      <div class="capt"><b>colchonesimperia</b> Tu cama es tu trono 👑 Desliza y descubre cuál es el tuyo → Escríbenos <b>TRONO</b> por DM y te asesoramos. ¡Llegamos a donde estés! 🚚</div>
     </div>
     <div class="notes">
       <div class="note">
         <h3>Concepto</h3>
         <p>“Tu cama es tu trono” juega con la corona del logo y el nombre <i>Imperia</i>. En vez de un catálogo slide por slide, el carrusel es un recorrido: primero la pregunta (¿cómo duermes?), después las líneas, y al final un selector que lleva a la acción con una palabra clave por DM, que además sirve para medir los leads.</p>
+      </div>
+      <div class="note">
+        <h3>Tomado de sus posts</h3>
+        <p>Logo dorado como firma en todos los slides, su frase “¡Llegamos a donde estés!” con los aliados a nivel nacional en el cierre, el usuario @colchonesimperia y descripciones cortas con emoji. Los slides siguen en video, igual que sus posts.</p>
       </div>
       <div class="note">
         <h3>Guion de slides</h3>
@@ -502,7 +511,8 @@ body.render #renderHost{display:block}
   <div class="chips">
     <span class="chip a-pop" style="--d:1.8s">Individual</span><span class="chip a-pop" style="--d:1.95s">Matrimonial</span><span class="chip a-pop" style="--d:2.1s">Queen</span><span class="chip a-pop" style="--d:2.25s">King</span>
   </div>
-  <div class="foot a-fade" style="--d:2.6s"><div class="serif it">Descanso de realeza.</div><small>COLCHONES IMPERIA · J-50441309-6</small></div>
+  <div class="deliv a-up" style="--d:2.5s"><svg viewBox="0 0 24 24" fill="none" stroke="#C9AA5C" stroke-width="1.6" stroke-linejoin="round"><path d="M2 6h11v10H2zM13 9h4.5l3.5 3.5V16h-8z"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span><b>¡Llegamos a donde estés!</b> Aliados a nivel nacional.</span></div>
+  <div class="foot a-fade" style="--d:2.9s"><div class="serif it">Descanso de realeza.</div><small>@COLCHONESIMPERIA · J-50441309-6</small></div>
 </section>
 </template>
 
@@ -520,7 +530,7 @@ body.render #renderHost{display:block}
       // header
       const light = s.classList.contains('light') || s.classList.contains('s7');
       const h = document.createElement('div'); h.className='hdr a-fade'; h.style.setProperty('--d','0s');
-      h.innerHTML = `<div class="brand"><i></i>IMPERIA · 2026</div><div class="num">${String(i+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}</div>`;
+      h.innerHTML = `<div class="brand"><img src="assets/logo.png" alt="Colchones Imperia"></div><div class="num">${String(i+1).padStart(2,'0')} / ${String(N).padStart(2,'0')}</div>`;
       if(i!==0 && i!==8) s.prepend(h);
       // thread
       const y0 = EDGE[i], y1 = EDGE[i+1];
