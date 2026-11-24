@@ -1,0 +1,24 @@
+ShotlistShotlist 
+Toma 1 
+Visual: Una familia sirviendo un café por la mañana en la cocina, riendo entre ellos mientras el sol entra por la ventana.
+Ángulo/Movimiento: Movimiento lento hacia adelante.
+Voz en off: "Agradecer no es sólo mirar atrás y ver lo que hemos logrado..."
+Toma 2 
+Visual: Las manos de un emprendedor organizando su negocio o cerrando la puerta de su local con una sonrisa de satisfacción.
+Ángulo/Movimiento: Panorámica rápida hacia la cara de la persona.
+Voz en off: "...es valorar el esfuerzo que le pones a cada día..."
+Toma 3 
+Visual: Una madre o padre caminando agarrado de la mano con su hijo en un parque o lugar tranquilo, transmitiendo paz y seguridad.
+Voz en off: "...y tener la tranquilidad de que lo que más amas está seguro."
+Toma 4 
+Visual: Una mesa compartida, un abrazo cálido entre familiares o amigos, compartiendo un momento de mesa o café (simbolizando la unión de Acción de Gracias).
+Voz en off: "Hoy damos gracias por los abrazos, por los sueños que siguen vivos y por la certeza de un mañana mejor."
+Toma 5 
+Visual: Una persona mirando a la cámara con una sonrisa sincera y serena, mientras la luz del atardecer le ilumina el rostro.
+Ángulo/Movimiento: Ligero zoom lento.
+Voz en off: "Porque cuidar de los tuyos es la mejor manera de agradecer."
+Toma 6 
+Plano: Fondo suave y desenfocado de la escena anterior.
+Visual: Aparece el logo de la empresa en pantalla con una tipografía limpia y el mensaje escrito: “Feliz Día de Acción de Gracias”.
+Voz en off: "Gracias por permitirnos acompañarte y proteger tu tranquilidad. Feliz Día de Acción de Gracias."
+
