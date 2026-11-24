@@ -603,37 +603,37 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 .hd em{font-style:italic}
 /* -- 1 VALERIA · tarjeta con luces -- */
 .x-val .card{position:absolute;inset:28px;border:2px solid rgba(233,206,140,.95);z-index:33;pointer-events:none;box-shadow:inset 0 0 0 7px rgba(255,255,255,.18)}
-.x-val .lg{left:62px;top:150px;width:200px}.x-val .rif{left:280px;top:178px;color:#3A342B}
+.x-val .lg{left:56px;top:70px;width:230px;background:#FFFCF6;padding:12px 16px;border-radius:12px;box-shadow:0 12px 26px -14px rgba(0,0,0,.5)}.x-val .rif{left:300px;top:102px;color:#3A342B}.x-val .cov .hd{font-size:70px}
 .x-val .scrim{position:absolute;left:0;right:0;z-index:12}
 .x-val .tt{position:absolute;left:66px;right:66px;z-index:20}
-.x-val .hd{font-size:88px;color:#1A1712}.x-val .hd em{color:#A3232B}
+.x-val .hd{font-size:88px;color:#1A1712}.x-val .hd em{color:#8F7030}
 .x-val .sub{margin-top:14px;font:500 24px/1.45 Montserrat;color:#3A342B;max-width:640px}
-.x-val .tag{display:inline-block;margin-bottom:10px;font:800 17px Montserrat;letter-spacing:.3em;color:#A3232B}
-.x-val .note{position:absolute;z-index:20;background:#FFFCF6;border-radius:18px;padding:24px 28px;box-shadow:0 26px 50px -24px rgba(0,0,0,.6);border-top:6px solid #A3232B}
+.x-val .tg2{display:block;margin-bottom:16px;font:800 17px Montserrat;letter-spacing:.3em;color:#8F7030}
+.x-val .note{position:absolute;z-index:20;background:#FFFCF6;border-radius:18px;padding:24px 28px;box-shadow:0 26px 50px -24px rgba(0,0,0,.6);border-top:6px solid #8F7030}
 .x-val .note .hd{font-size:58px}
 .x-val .note .sub{font-size:21px;margin-top:10px}
 /* -- 2 CAMILA · lista de papel -- */
-.x-cam .lg{right:56px;top:52px;width:200px}.x-cam .rif{right:58px;top:122px;color:#3A342B}
-.paper{position:absolute;z-index:20;background:#FFFDF7;border-radius:6px;box-shadow:0 30px 60px -28px rgba(0,0,0,.6);padding:34px 34px 30px 74px;background-image:linear-gradient(90deg,transparent 52px,rgba(200,32,43,.55) 52px,rgba(200,32,43,.55) 54px,transparent 54px),repeating-linear-gradient(180deg,transparent 0 45px,rgba(60,120,190,.22) 45px 46px);transform:rotate(var(--r,0deg))}
+.x-cam .lg{right:50px;top:46px;width:230px;background:#FFFDF7;padding:12px 16px;border-radius:12px;box-shadow:0 12px 26px -14px rgba(0,0,0,.55)}.x-cam .rif{right:66px;top:120px;color:#3A342B;font-size:12px}
+.paper{position:absolute;z-index:20;background:#FFFDF7;border-radius:6px;box-shadow:0 30px 60px -28px rgba(0,0,0,.6);padding:34px 34px 30px 74px;background-image:linear-gradient(90deg,transparent 52px,rgba(201,170,92,.6) 52px,rgba(201,170,92,.6) 54px,transparent 54px),repeating-linear-gradient(180deg,transparent 0 45px,rgba(201,170,92,.16) 45px 46px);transform:rotate(var(--r,0deg))}
 .on .paper{animation:pIn .8s cubic-bezier(.3,1.4,.5,1) var(--d) both}
 @keyframes pIn{from{opacity:0;transform:rotate(var(--r,0deg)) translateY(60px) scale(.9)}to{opacity:1;transform:rotate(var(--r,0deg))}}
-.paper .hd{font-size:62px;color:#1A1712}.paper .hd em{color:#C8202B}
-.paper .k{font:800 16px Montserrat;letter-spacing:.3em;color:#2F6B45;margin-bottom:8px}
+.paper .hd{font-size:62px;color:#1A1712}.paper .hd em{color:#8F7030}
+.paper .k{font:800 16px Montserrat;letter-spacing:.3em;color:#8F7030;margin-bottom:8px}
 .it3{display:flex;align-items:center;gap:16px;font:italic 500 34px/46px "Cormorant Garamond",serif;color:#1A1712}
-.it3 i{flex:none;width:30px;height:30px;border:2.5px solid #1A1712;border-radius:5px;display:grid;place-items:center;color:#C8202B;position:relative}
+.it3 i{flex:none;width:30px;height:30px;border:2.5px solid #1A1712;border-radius:5px;display:grid;place-items:center;color:#8F7030;position:relative}
 .it3 i svg{width:28px;height:28px;opacity:0;transform:scale(.3)}
 .on .it3 i svg{animation:tick .4s cubic-bezier(.3,1.8,.5,1) var(--c) both}
 @keyframes tick{to{opacity:1;transform:scale(1.25)}}
-.it3 s{text-decoration:none;background:linear-gradient(#C8202B,#C8202B) 0 55%/0 2.5px no-repeat}
+.it3 s{text-decoration:none;background:linear-gradient(#8F7030,#8F7030) 0 55%/0 2.5px no-repeat}
 .on .it3 s{animation:strike .5s ease var(--c) both}
 @keyframes strike{to{background-size:100% 2.5px}}
 .it3.big{font-size:42px}
-.washi{position:absolute;z-index:22;width:150px;height:40px;background:repeating-linear-gradient(45deg,#C8202B 0 12px,#fff 12px 24px);opacity:.85;transform:rotate(var(--r))}
+.washi{position:absolute;z-index:22;width:150px;height:40px;background:linear-gradient(90deg,rgba(215,188,114,.75),rgba(240,222,170,.85));opacity:.9;transform:rotate(var(--r))}
 .cane{position:absolute;z-index:23;width:62px}
 .on .cane{animation:stkIn2 .6s cubic-bezier(.3,1.6,.5,1) var(--d) both}
 @keyframes stkIn2{from{opacity:0;transform:rotate(var(--r)) scale(.2)}to{opacity:1;transform:rotate(var(--r)) scale(1)}}
 .x-cam .foot{position:absolute;z-index:20;background:#FFFDF7;border-radius:14px;padding:14px 20px;box-shadow:0 16px 34px -16px rgba(0,0,0,.5);color:#1A1712}
-.x-cam .foot b{color:#C8202B}.x-cam .foot svg{color:#2F6B45}
+.x-cam .foot b{color:#8F7030}.x-cam .foot svg{color:#8F7030}
 /* -- 3 PELICULAS · cine -- */
 .film{position:absolute;top:0;bottom:0;width:62px;z-index:33;background:#0C0B09;overflow:hidden}
 .film.l{left:0}.film.r{right:0}
@@ -642,25 +642,25 @@ html,body{background:var(--page);color:var(--page-ink);font-family:Montserrat,sy
 @keyframes roll{to{transform:translateY(520px)}}
 .x-mov .lg{left:88px;bottom:44px;width:190px}.x-mov .rif{left:296px;bottom:66px;color:#F3E7C6}
 .x-mov .lgbg{position:absolute;left:62px;right:62px;bottom:0;height:150px;z-index:32;background:linear-gradient(0deg,rgba(12,11,9,.88),rgba(12,11,9,0))}
-.marq{position:absolute;z-index:20;left:110px;right:110px;background:#160F0C;border:3px solid #C9AA5C;border-radius:22px;padding:30px 36px;text-align:center;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+.marq{position:absolute;z-index:20;left:110px;right:110px;background:rgba(12,11,9,.9);border:3px solid #C9AA5C;border-radius:22px;padding:30px 36px;text-align:center;box-shadow:0 30px 70px -30px rgba(0,0,0,.8)}
 .marq .bul{position:absolute;inset:-14px;pointer-events:none}
 .marq .bul i{position:absolute;width:12px;height:12px;border-radius:50%;background:#FFE9A8;box-shadow:0 0 10px #FFD36B}
 .on .marq .bul i{animation:tw2 .9s steps(2) var(--d) infinite}
 .marq .k{font:800 18px Montserrat;letter-spacing:.34em;color:#E7C36A}
-.marq .hd{font-size:78px;color:#FFF6E2;margin-top:6px}.marq .hd em{color:#E44A4A}
+.marq .hd{font-size:78px;color:#FFF6E2;margin-top:6px}.marq .hd em{color:#E7C36A}
 .marq .sub{font:500 22px Montserrat;color:#E8DCC2;margin-top:10px}
-.ticket{position:absolute;z-index:20;display:flex;background:#F4E6C4;color:#1A1712;border-radius:12px;box-shadow:0 20px 40px -18px rgba(0,0,0,.7);transform:rotate(var(--r))}
+.ticket{position:absolute;z-index:20;display:flex;background:#FBF6EA;color:#1A1712;border-radius:12px;box-shadow:0 20px 40px -18px rgba(0,0,0,.7);transform:rotate(var(--r))}
 .on .ticket{animation:stkIn2 .7s cubic-bezier(.3,1.5,.5,1) var(--d) both}
-.ticket .a{padding:18px 24px;border-right:3px dashed #B3262E}
-.ticket .a small{display:block;font:800 14px Montserrat;letter-spacing:.3em;color:#B3262E}
+.ticket .a{padding:18px 24px;border-right:3px dashed #8F7030}
+.ticket .a small{display:block;font:800 14px Montserrat;letter-spacing:.3em;color:#8F7030}
 .ticket .a b{display:block;font:italic 600 44px/1.05 "Cormorant Garamond",serif}
-.ticket .b{padding:18px 20px;display:flex;align-items:center;font:800 26px Montserrat;color:#B3262E;writing-mode:vertical-rl;transform:rotate(180deg)}
+.ticket .b{padding:18px 20px;display:flex;align-items:center;font:800 26px Montserrat;color:#8F7030;writing-mode:vertical-rl;transform:rotate(180deg)}
 .x-mov .cap{position:absolute;z-index:20;left:110px;right:110px;font:500 25px/1.45 Montserrat;color:#F3E7C6;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 .x-mov .cap b{color:#FFE29A}
 /* -- 4 SANTA · cuento nocturno -- */
 .x-san .lg{left:50%;top:40px;width:210px;margin-left:-105px}.x-san .rif{left:0;right:0;top:110px;text-align:center;color:#F3E7C6}
-.x-san .topv{position:absolute;left:0;right:0;top:0;height:300px;z-index:12;background:linear-gradient(180deg,rgba(14,18,40,.82),rgba(14,18,40,0))}
-.x-san .botv{position:absolute;left:0;right:0;bottom:0;z-index:12;background:linear-gradient(0deg,rgba(12,15,34,.94) 0%,rgba(12,15,34,.75) 45%,rgba(12,15,34,0) 100%)}
+.x-san .topv{position:absolute;left:0;right:0;top:0;height:300px;z-index:12;background:linear-gradient(180deg,rgba(12,11,9,.72),rgba(12,11,9,0))}
+.x-san .botv{position:absolute;left:0;right:0;bottom:0;z-index:12;background:linear-gradient(0deg,rgba(12,11,9,.9) 0%,rgba(12,11,9,.6) 45%,rgba(12,11,9,0) 100%)}
 .x-san .tt{position:absolute;left:70px;right:70px;z-index:20;text-align:center}
 .x-san .hd{font-size:80px;color:#FFF8EA}.x-san .hd em{color:#F0CF7A}
 .x-san .sub{margin-top:14px;font:500 24px/1.45 Montserrat;color:#E6DEC8}
@@ -826,7 +826,7 @@ body.render #renderHost{display:block}
       s.querySelectorAll('#ticks').forEach(g=>{ let h=''; for(let k=0;k<24;k++){ const a=k/24*Math.PI*2, r1=k%6?300:290, r2=312; h+=`<line class="tick" x1="${350+Math.sin(a)*r1}" y1="${350-Math.cos(a)*r1}" x2="${350+Math.sin(a)*r2}" y2="${350-Math.cos(a)*r2}"/>`; } g.innerHTML=h; g.removeAttribute('id'); });
       s.querySelectorAll('.sky').forEach(box=>{ const r=rng(91+i*17); for(let k=0;k<46;k++){ const st=document.createElement('i'); st.className='star'; st.style.left=(r()*1080)+'px'; st.style.top=(r()*(i===0?1300:520))+'px'; st.style.setProperty('--s',(2+r()*3.5).toFixed(1)+'px'); st.style.setProperty('--t',(2+r()*3).toFixed(2)+'s'); st.style.setProperty('--d',(-r()*4).toFixed(2)+'s'); st.style.setProperty('--o',(.5+r()*.5).toFixed(2)); box.appendChild(st);} });
       s.querySelectorAll('.bokeh').forEach(box=>{ const r=rng(301+i*29); for(let k=0;k<16;k++){ const b=document.createElement('i'); b.className='bk'; b.style.left=(r()*1080-60)+'px'; b.style.top=(r()*1350-60)+'px'; b.style.setProperty('--s',(40+r()*140).toFixed(0)+'px'); b.style.setProperty('--b',(2+r()*10).toFixed(1)+'px'); b.style.setProperty('--a',(.18+r()*.35).toFixed(2)); b.style.setProperty('--t',(3+r()*4).toFixed(2)+'s'); b.style.setProperty('--d',(-r()*5).toFixed(2)+'s'); b.style.setProperty('--dx',((r()-.5)*60).toFixed(0)+'px'); box.appendChild(b);} });
-      s.querySelectorAll('.snow').forEach(box=>{ const r=rng(51+i*7); const cs=['#fff','#fff','#F3E1A6']; for(let k=0;k<40;k++){ const d=document.createElement('i'); d.style.left=(r()*1080)+'px'; d.style.setProperty('--s',(3+r()*7).toFixed(1)+'px'); d.style.setProperty('--o',(.35+r()*.55).toFixed(2)); d.style.setProperty('--b',(r()*1.5).toFixed(1)+'px'); d.style.setProperty('--t',(6+r()*7).toFixed(1)+'s'); d.style.setProperty('--d',(-r()*13).toFixed(1)+'s'); d.style.setProperty('--dx',((r()-.5)*160).toFixed(0)+'px'); d.style.setProperty('--c',cs[k%3]); box.appendChild(d);} });
+      s.querySelectorAll('.snow').forEach(box=>{ const r=rng(51+i*7); const cs=['#fff','#F3E1A6','#E7C36A']; for(let k=0;k<40;k++){ const d=document.createElement('i'); d.style.left=(r()*1080)+'px'; d.style.setProperty('--s',(3+r()*7).toFixed(1)+'px'); d.style.setProperty('--o',(.35+r()*.55).toFixed(2)); d.style.setProperty('--b',(r()*1.5).toFixed(1)+'px'); d.style.setProperty('--t',(6+r()*7).toFixed(1)+'s'); d.style.setProperty('--d',(-r()*13).toFixed(1)+'s'); d.style.setProperty('--dx',((r()-.5)*160).toFixed(0)+'px'); d.style.setProperty('--c',cs[k%3]); box.appendChild(d);} });
       s.querySelectorAll('.sky').forEach(box=>{ const r=rng(13+i*5); for(let k=0;k<26;k++){ const d=document.createElement('i'); d.style.left=(r()*1080)+'px'; d.style.top=(r()*420)+'px'; d.style.setProperty('--s',(8+r()*16).toFixed(0)+'px'); d.style.setProperty('--t',(1.8+r()*2.5).toFixed(1)+'s'); d.style.setProperty('--d',(-r()*3).toFixed(1)+'s'); box.appendChild(d);} });
       // stars
       s.querySelectorAll('.stars').forEach(box=>{
