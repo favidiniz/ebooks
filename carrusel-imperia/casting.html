@@ -99,7 +99,7 @@ const cast = [
     scenes:[["Pola de casting","Casting polaroid sheet of the same woman: front portrait, three-quarter view, profile and full body standing, plain warm off-white studio background, white sweatshirt and black trousers, friendly expression."],
             ["Selfie recomendando","Vertical selfie-style shot lying on white pillows, giving a thumbs up and smiling at the camera, cozy knit blanket, soft morning light. "+NOBED],
             ["Contando un tip","Sitting cross-legged on a made bed talking to the camera with one hand gesturing, natural daylight, relaxed and warm. "+NOBED]]},
-  { name:"Familia Herrera", role:"Premium y Doble Pillow Top · Mariana, Andrés, Sofía y la bebé Lucía",
+  { name:"Familia Herrera", role:"Premium y Doble Pillow Top · Mariana, Andrés, Sofía y la bebé Lucía", img:"assets/casting/herrera-grupo.jpg", ratio:"4/3", sheet:"assets/casting/herrera-pola.jpg",
     facts:{Mariana:"34 años, piel clara, cabello castaño recogido en moño bajo, camisa celeste o crema, collar de perlas",Andrés:"36 años, piel trigueña, cabello oscuro ondulado, barba corta, camisa tejida beige, reloj plateado",Sofía:"6 años, cabello castaño liso con flequillo, sonrisa grande, vestido o blusa blanca con detalles lila",Lucía:"Bebé de 4 meses, ropa blanca"},
     use:["Línea Premium","Doble Pillow Top","Fechas familiares"],
     base:"Elegant relaxed Latin family: Mariana, 34, fair skin, brown hair in a low bun, light blue shirt, pearl necklace; Andrés, 36, olive skin, dark wavy hair, short beard, beige knit polo, silver watch; Sofía, 6, straight brown hair with bangs, big smile, white blouse with lilac trim; baby Lucía, 4 months, in white",
@@ -112,7 +112,7 @@ cast.forEach((c,ci)=>{
   const el=document.createElement('article'); el.className='p';
   const facts=Object.entries(c.facts).map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
   const sc=c.scenes.map(([t,s],si)=>{const full=`${c.base}. ${s} ${STYLE}`;return `<details${si===0?' open':''}><summary>${t}</summary><div class="pr"><pre id="pr-${ci}-${si}">${full}</pre><div class="meta">Soul 2.0 · ${si===0?'3:4 · sin Soul ID':'4:5 o 3:4 · con el Soul ID de '+c.name}</div><button class="copy" data-t="pr-${ci}-${si}">Copiar prompt</button></div></details>`}).join('');
-  const ph = c.img ? `<img src="${c.img}" alt="Pola de ${c.name}" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover">` : `<div class="ph">Aquí va su pola cuando la generes en Higgsfield</div>`;
+  const ph = c.img ? `<img src="${c.img}" alt="Pola de ${c.name}" style="display:block;width:100%;aspect-ratio:${c.ratio||'3/4'};object-fit:cover">` : `<div class="ph">Aquí va su pola cuando la generes en Higgsfield</div>`;
   const status = c.img ? `<span class="ok">Pola aprobada</span>` : `<span class="pend">Pola pendiente</span>`;
   const sheet = c.sheet ? `<details><summary>Hoja de casting aprobada</summary><div class="pr"><img src="${c.sheet}" alt="Hoja de casting de ${c.name}: frente, tres cuartos, perfil y cuerpo entero" style="width:100%;border-radius:8px"><div class="meta">Referencia oficial. Úsala para crear su Soul ID en Higgsfield.</div></div></details>` : '';
   el.innerHTML=`<div class="pola">${ph}<div class="nm">${c.name}</div></div>
