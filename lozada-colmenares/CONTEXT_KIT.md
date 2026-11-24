@@ -103,7 +103,7 @@ Salen del Plan de Contenidos 2026 y del feedback que dejó el cliente en los doc
   - `LCA_logo_color`: letras y swoosh superior en gris **#ADADAD**, swoosh inferior y «Corretaje de Seguros C.A» en naranja **#EC6C2D**. Va sobre fondos claros.
   - `LCA_logo_blanco_naranja`: blanco con swoosh naranja. Va sobre fotos o fondos oscuros.
   - `LCA_logo_blanco`: todo blanco. Va sobre naranja o fotos con mucho color.
-  - `LCA_logo_negro`: monocromo carbón #45413E.
+  - `LCA_logo_gris_carbon`: monocromo gris carbón #45413E (nunca negro).
   - `LCA_isotipo_*`: solo «LC&A» con los swooshes, sin el texto (color, blanco con naranja, blanco).
   - ⚠️ Es una **reconstrucción**: se vectorizó a partir de las piezas publicadas (story de aniversario de sep 2026, la versión más grande, de ~600 px). Los colores se tomaron de las piezas a color de 2023 y 2026. Sirve para producir, pero el AI/SVG original del cliente sería lo ideal.
 
@@ -113,12 +113,14 @@ Salen del Plan de Contenidos 2026 y del feedback que dejó el cliente en los doc
 |---|---|---|
 | **Naranja LC&A** (principal) | naranja vibrante | **#FA7322** (moodboard 2026) · el del logo es **#EC6C2D** · en las piezas varía entre #F27D37 y #E07E3D |
 | **Gris LC&A** (secundario) | gris plata | **#A8A9AD** (moodboard) · el del logo es **#ADADAD** |
-| Texto oscuro / carbón | gris cálido casi negro | #45413E |
+| Texto / gris carbón | gris cálido oscuro (del moodboard 2026) | #45413E |
 | Fondos claros | blanco roto / papel | #F6F6F6 · #FFFFFF |
-| Fondos oscuros | negro o carbón con foto desenfocada | #1E1E1E aprox. |
+| ~~Negro~~ | **No es un color de LC&A.** No usar negro ni casi negro, ni en fondos ni en texto | — |
 | Estacional | Octubre Rosa: magenta #A81969 y rosa | solo para campañas temáticas |
 
-El naranja es el que manda. El gris acompaña el logo y los detalles. El texto va en blanco sobre foto o naranja, y en gris oscuro sobre claro.
+El naranja es el que manda. El gris acompaña el logo y los detalles. El texto va en blanco sobre foto o naranja, y en gris carbón #45413E sobre claro.
+
+> ⚠️ **Regla del cliente: el negro NO es un color de Lozada.** Los fondos van en blanco roto, naranja, gris claro o foto. El texto oscuro va siempre en gris carbón #45413E. Aunque algunas piezas de 2026 usaron fondos casi negros, no se repite.
 
 ### 5.3 Tipografía
 - **Futura LT Pro** (Book para el texto y Heavy para los destacados): es la que está embebida en la *Guía de Semana Santa 2026* y coincide con lo que se ve en las piezas y en el texto del logo. **Es la tipografía de marca.**
@@ -130,7 +132,7 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 ### 5.4 Sistemas de layout (de más a menos usado en 2025–2026)
 1. **Foto a sangre + caja naranja redondeada** (semitransparente o sólida) con el texto en blanco, más el logo blanco abajo. Es la firma visual de 2025–26 (abril, mayo y agosto).
 2. **Foto oscurecida o desenfocada + texto blanco centrado** en Futura, con palabras en bold. Sirve para piezas informativas y emocionales (Navidad, cáncer, salud).
-3. **Fondo carbón o negro + titular blanco con palabra clave en naranja** (sismos, stories de julio, Diabetes, Psicólogo). Es más editorial y premium.
+3. ~~Fondo carbón o negro + titular blanco~~ (sismos, stories de julio, Diabetes, Psicólogo). **Ya no se usa: el negro no es color de la marca.** Para el mismo efecto editorial se usa fondo naranja o blanco roto con titular grande.
 4. **Textura de papel arrugado y tarjetas blancas** con fotos tipo polaroid y números grandes naranja (carruseles numerados de dic 2025 y jul 2026).
 5. **Mockups de interfaz:** notas de iCloud («Manifestaciones para septiembre»), teclado iOS con sugerencias, barra de búsqueda y cartel con chevron naranja (›) en la esquina como «desliza».
 6. **Humor e irreverencia:** animales 3D o IA (hámster con café, hormigas «gastos hormiga», perro con tarjeta LC&A, mono «2 novios») y memes (Spider-Man «choqué el auto / me acordé que tengo seguro»).
@@ -165,7 +167,7 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 ### 5.8 Evolución
 - **2023–2024:** fondos blancos o gris claro, bloques naranja sólidos redondeados, íconos lineales naranja, logo arriba y la serie «Spoilers». Es más plano y corporativo.
 - **2025:** fotos cálidas con cajas «pill» naranja. Es más emocional y fotográfico.
-- **2026:** es la línea actual. Es más **cinematográfica y editorial**: fotos oscuras, titulares grandes, IA hiperrealista, humor y mockups. El naranja se usa como acento. → **Para piezas nuevas, usar 2026 como referencia.**
+- **2026:** es la línea actual. Es más **cinematográfica y editorial**: titulares grandes, IA hiperrealista, humor y mockups. El naranja se usa como acento. → **Para piezas nuevas, usar 2026 como referencia.**
 
 ---
 
