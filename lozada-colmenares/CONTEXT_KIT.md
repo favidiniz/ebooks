@@ -39,7 +39,7 @@
 
 Salen del Plan de Contenidos 2026 y del feedback que dejó el cliente en los docs:
 
-0. **RIF J-30215603-3 en TODAS las slides.** Va en cada slide de cada carrusel, en cada story, en cada post, flyer, portada de reel y cierre de video. No basta con ponerlo en la primera o la última; es un requisito regulatorio para una corredora de seguros. Especificaciones en §5.7.
+0. **RIF J-30215603-3 en TODAS las slides.** Va en cada slide de cada carrusel, en cada story, en cada post, flyer, portada de reel y cierre de video. No basta con ponerlo en la primera o la última; lo exige el cliente. Especificaciones en §5.7.
 1. **No se vende directamente.** Se muestra el **valor del corretaje**. El enfoque siempre es **educación, prevención, concientización y acompañamiento**.
 2. **No mencionar costos**, solo beneficios y cómo te ayuda (feedback de agosto 2025).
 3. **Gerencia de riesgo antes que «asegúrate».** Feedback dic 2023: *«Prevención, no te enfoques en asegurar sino en gerencia de riesgo»*.
