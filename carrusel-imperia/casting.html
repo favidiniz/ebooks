@@ -1,0 +1,123 @@
+<title>Casting Imperia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* Layout: ficha de casting por personaje — pola (placeholder) a la izquierda, datos fijos y prompts a la derecha */
+:root{
+  --bg:#F3EFE7; --card:#FFFDF9; --ink:#1A1712; --muted:#6C6559; --line:#DDD5C6;
+  --gold:#A88637; --gold-soft:#E9DCB8; --code:#F6F1E6;
+  --f-display:"Cormorant Garamond",Georgia,serif; --f-body:Montserrat,system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12100D;--card:#1B1814;--ink:#EFE9DD;--muted:#A69E90;--line:#2E2A23;--gold:#D2B263;--gold-soft:#3A3122;--code:#221E18;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12100D;--card:#1B1814;--ink:#EFE9DD;--muted:#A69E90;--line:#2E2A23;--gold:#D2B263;--gold-soft:#3A3122;--code:#221E18;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1;margin:0;text-wrap:balance}
+h1 em{color:var(--gold)}
+.lead{color:var(--muted);max-width:68ch;margin:10px 0 0}
+.lbl{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.box h2{font-family:var(--f-display);font-size:28px;font-weight:600;margin:4px 0 10px}
+.steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:6px}
+.rules div{border-top:2px solid var(--gold);padding-top:10px;font-size:14px}
+.rules b{display:block;margin-bottom:2px}
+.cast{display:flex;flex-direction:column;gap:22px}
+.p{display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+@media (max-width:760px){.p{grid-template-columns:1fr}}
+.pola{background:#fff;padding:12px 12px 46px;box-shadow:0 12px 30px -16px rgba(0,0,0,.35);transform:rotate(-1.5deg);align-self:start;position:relative;max-width:230px}
+.pola .ph{aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#EEE7D8 0 10px,#E6DDCA 10px 20px);display:grid;place-items:center;text-align:center;color:#8A7F6A;font-size:12px;padding:10px}
+.pola .nm{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-family:var(--f-display);font-style:italic;font-size:24px;color:#1A1712}
+.p h3{font-family:var(--f-display);font-size:34px;font-weight:600;margin:0;line-height:1.05}
+.p .role{color:var(--muted);margin:4px 0 14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 18px;margin:0 0 16px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.facts dd{margin:2px 0 0;font-size:14px}
+.use{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.use span{background:var(--gold-soft);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+details{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:var(--code)}
+summary{cursor:pointer;padding:12px 14px;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-weight:700}
+details[open] summary::after{content:"–"}
+.pr{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px}
+.pr pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--f-mono);font-size:12.5px;line-height:1.55;color:var(--ink)}
+.meta{font-size:12px;color:var(--muted)}
+button.copy{align-self:flex-start;font:600 13px var(--f-body);background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="lbl">Colchones Imperia · Elenco de marca</div>
+    <h1>Casting <em>Imperia</em></h1>
+    <p class="lead">Personajes ficticios de la marca, con rasgos fijos para que siempre se vean iguales. Para pedir una foto, dime el nombre y la escena: “Valeria leyendo en la cama para el slide 2”. Los textos están en inglés porque Higgsfield responde mejor así.</p>
+  </header>
+
+  <section class="box">
+    <div class="lbl">Cómo crearlos en Higgsfield</div>
+    <h2>De la pola a la foto final</h2>
+    <ol class="steps">
+      <li><b>Pola:</b> en Higgsfield elige <b>Soul 2.0</b>, formato <b>3:4</b>, pega el prompt “Pola” del personaje y genera. Guarda la mejor y súbela a la carpeta de Drive de la marca con su nombre.</li>
+      <li><b>Fijar la identidad:</b> con varias fotos aprobadas del mismo personaje, crea un <b>Soul ID</b> con su nombre (ej. “Valeria Imperia”). Así la cara se mantiene en todas las escenas.</li>
+      <li><b>Escenas:</b> usa Soul 2.0 con ese Soul ID y el prompt de la escena, en 4:5 o 3:4 para el carrusel.</li>
+      <li><b>Créditos:</b> tu cuenta está en plan gratuito con 10 créditos, que alcanzan para pocas pruebas. Para el elenco completo conviene un plan pago.</li>
+    </ol>
+    <div class="rules">
+      <div><b>Siempre ficticios</b>Nunca usar fotos ni nombres de personas reales como referencia de cara.</div>
+      <div><b>Sin colchones genéricos</b>Camas con edredón y sábanas que cubran todo; el colchón no se ve. Si debe verse, se usa la foto real de Imperia.</div>
+      <div><b>Paleta de marca</b>Blanco, crema, negro y toques dorados. Sábanas blancas o negras, como en sus posts.</div>
+      <div><b>Niños</b>Siempre con su familia, vestidos, en escenas cotidianas y cálidas.</div>
+    </div>
+  </section>
+
+  <section class="cast" id="cast"></section>
+</div>
+
+<script>
+const STYLE = "Photorealistic, natural skin texture, soft warm window light, editorial lifestyle photography, cream, white and black palette with subtle gold accents, shallow depth of field. Fictional person with an original face, not resembling any real person or celebrity.";
+const NOBED = "The bed is fully covered by a white duvet and sheets; no mattress edge visible.";
+const cast = [
+  { name:"Valeria", role:"Descanso y bienestar · la voz principal",
+    facts:{Edad:"27 años",Rasgos:"Latina, piel trigueña clara, ojos marrón oscuro, cejas naturales, pecas suaves en nariz y mejillas",Cabello:"Castaño oscuro, largo y liso, raya al medio",Estilo:"Natural, poco maquillaje, camisetas de tirantes negras o pijama de seda crema, collar fino dorado"},
+    use:["Posts de descanso","Hábitos de sueño","Rutina de mañana y noche"],
+    base:"27-year-old Latina woman, light olive skin, dark brown eyes, natural brows, soft freckles across nose and cheeks, long straight dark brown hair with a middle part, minimal makeup, thin gold necklace",
+    scenes:[["Pola de casting","Casting polaroid sheet of the same woman: front portrait, three-quarter view, profile and full body standing, plain warm off-white studio background, simple black tank top and cream trousers, neutral relaxed expression."],
+            ["Durmiendo (slide 1 de Descanso)","Close-up of her sleeping peacefully on a white pillow, eyes closed, calm expression, night ambience with a warm bedside lamp glow, black silk sheets. "+NOBED],
+            ["Leyendo en la cama (slide 2 de Descanso)","Sitting in bed reading a paperback book under a warm lamp, phone face down on the nightstand, cream silk pajamas, relaxed smile. "+NOBED],
+            ["Despertando (slide 3 de Descanso)","Stretching her arms up while sitting in bed at sunrise, golden morning light through sheer curtains, fresh and energetic expression, cream pajamas. "+NOBED]]},
+  { name:"Camila", role:"Recomendaciones · tono de amiga cercana",
+    facts:{Edad:"32 años",Rasgos:"Latina, piel bronceada, ojos color miel, sonrisa amplia",Cabello:"Ondulado a media espalda, castaño con reflejos miel",Estilo:"Sudadera o camiseta blanca, uñas nude, aretes pequeños dorados; estilo selfie cercano"},
+    use:["Testimonios","Consejos tipo amiga","Contenido estilo UGC"],
+    base:"32-year-old Latina woman, warm tan skin, honey-brown eyes, wide friendly smile, wavy mid-back brown hair with honey highlights, white sweatshirt, small gold hoop earrings, nude nails",
+    scenes:[["Pola de casting","Casting polaroid sheet of the same woman: front portrait, three-quarter view, profile and full body standing, plain warm off-white studio background, white sweatshirt and black trousers, friendly expression."],
+            ["Selfie recomendando","Vertical selfie-style shot lying on white pillows, giving a thumbs up and smiling at the camera, cozy knit blanket, soft morning light. "+NOBED],
+            ["Contando un tip","Sitting cross-legged on a made bed talking to the camera with one hand gesturing, natural daylight, relaxed and warm. "+NOBED]]},
+  { name:"Familia Herrera", role:"Premium y Doble Pillow Top · Mariana, Andrés, Sofía y la bebé Lucía",
+    facts:{Mariana:"34 años, piel clara, cabello castaño recogido en moño bajo, camisa celeste o crema, collar de perlas",Andrés:"36 años, piel trigueña, cabello oscuro ondulado, barba corta, camisa tejida beige, reloj plateado",Sofía:"6 años, cabello castaño liso con flequillo, sonrisa grande, vestido o blusa blanca con detalles lila",Lucía:"Bebé de 4 meses, ropa blanca"},
+    use:["Línea Premium","Doble Pillow Top","Fechas familiares"],
+    base:"Elegant relaxed Latin family: Mariana, 34, fair skin, brown hair in a low bun, light blue shirt, pearl necklace; Andrés, 36, olive skin, dark wavy hair, short beard, beige knit polo, silver watch; Sofía, 6, straight brown hair with bangs, big smile, white blouse with lilac trim; baby Lucía, 4 months, in white",
+    scenes:[["Pola de casting","Family casting sheet: each family member photographed separately on a plain warm off-white studio background (front portrait of Mariana, Andrés and Sofía, and baby Lucía held in arms), then one group shot of the four together, natural expressions, all fully clothed in cream and white."],
+            ["Domingo en la cama","The whole family sitting together on a large bed on a lazy Sunday morning, Sofía laughing between her parents, Andrés holding baby Lucía, sunlight through sheer curtains, white bedding. "+NOBED],
+            ["Hora de dormir","Mariana reading a bedtime story to Sofía tucked under a white duvet, warm lamp light, calm and loving atmosphere. "+NOBED]]}
+];
+const host=document.getElementById('cast');
+cast.forEach((c,ci)=>{
+  const el=document.createElement('article'); el.className='p';
+  const facts=Object.entries(c.facts).map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+  const sc=c.scenes.map(([t,s],si)=>{const full=`${c.base}. ${s} ${STYLE}`;return `<details${si===0?' open':''}><summary>${t}</summary><div class="pr"><pre id="pr-${ci}-${si}">${full}</pre><div class="meta">Soul 2.0 · ${si===0?'3:4 · sin Soul ID':'4:5 o 3:4 · con el Soul ID de '+c.name}</div><button class="copy" data-t="pr-${ci}-${si}">Copiar prompt</button></div></details>`}).join('');
+  el.innerHTML=`<div class="pola"><div class="ph">Aquí va su pola cuando la generes en Higgsfield</div><div class="nm">${c.name}</div></div>
+  <div><h3>${c.name}</h3><p class="role">${c.role}</p><dl class="facts">${facts}</dl><div class="use">${c.use.map(u=>`<span>${u}</span>`).join('')}</div>${sc}</div>`;
+  host.appendChild(el);
+});
+host.addEventListener('click',async e=>{
+  const b=e.target.closest('button.copy'); if(!b) return;
+  const pre=document.getElementById(b.dataset.t);
+  try{await navigator.clipboard.writeText(pre.textContent); b.textContent='Copiado';}
+  catch(err){const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Texto seleccionado: cópialo';}
+  setTimeout(()=>b.textContent='Copiar prompt',1800);
+});
+</script>
