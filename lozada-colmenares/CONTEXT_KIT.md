@@ -11,7 +11,7 @@
 |---|---|
 | **Nombre legal** | Lozada Colmenares & Asociados, Corretaje de Seguros C.A. |
 | **Siglas / marca** | **LC&A** (en los textos también «Lozada») |
-| **RIF** | J-30215603-3 (va en pequeño en el borde de cada pieza) |
+| **RIF** | **J-30215603-3**: obligatorio en **cada slide** de cualquier formato (ver §2 y §5.8) |
 | **Qué hacen** | **Corretaje de seguros**: no son aseguradora, asesoran, diseñan el programa de seguros y acompañan en reclamos y siniestros. |
 | **Sede** | Barquisimeto, Lara (Venezuela). Tienen sucursal en **Acarigua**. Mencionan una filial internacional («Life and Health»). |
 | **Historia** | Fundada en **1973** por **Dulce María Lozada**. Es una empresa familiar con **3 generaciones**. Celebraron sus **50 años en dic 2023** (logo especial «50»). |
@@ -39,6 +39,7 @@
 
 Salen del Plan de Contenidos 2026 y del feedback que dejó el cliente en los docs:
 
+0. **RIF J-30215603-3 en TODAS las slides.** Va en cada slide de cada carrusel, en cada story, en cada post, flyer, portada de reel y cierre de video. No basta con ponerlo en la primera o la última; es un requisito regulatorio para una corredora de seguros. Especificaciones en §5.8.
 1. **No se vende directamente.** Se muestra el **valor del corretaje**. El enfoque siempre es **educación, prevención, concientización y acompañamiento**.
 2. **No mencionar costos**, solo beneficios y cómo te ayuda (feedback de agosto 2025).
 3. **Gerencia de riesgo antes que «asegúrate».** Feedback dic 2023: *«Prevención, no te enfoques en asegurar sino en gerencia de riesgo»*.
@@ -136,7 +137,7 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 7. **Metáfora hiperrealista con IA:** dominó sobre una panadería, alcancía rota, cable que parece un sistema nervioso, nubes en forma de escudo o casa, latte art con el escudo.
 8. **Personas sosteniendo un cartel blanco** con el mensaje y el logo (fotos con efecto ojo de pez, julio 2026).
 
-**Detalles recurrentes:** indicador «Desliza hacia un lado ➜» o flecha naranja · numeración de slides · RIF pequeño en un borde · márgenes amplios · máximo 2–3 líneas de titular.
+**Detalles recurrentes:** indicador «Desliza hacia un lado ➜» o flecha naranja · numeración de slides · RIF en todas las slides (§5.8) · márgenes amplios · máximo 2–3 líneas de titular.
 
 ### 5.5 Fotografía
 - Lifestyle cálido: familias, parejas, mascotas, emprendedores y profesionales de salud. Luz natural o dorada, contraste de **gris o sombrío (problema) → cálido (solución)**.
@@ -146,6 +147,20 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 ### 5.6 Formatos
 - **Feed:** 1080×1350 (4:5) en 2025–26. Hay piezas de 2026 en **1080×1440 (3:4)** para la nueva cuadrícula de IG. Son carruseles de 4–6 slides.
 - **Stories / reels:** 1080×1920 (9:16).
+
+### 5.8 RIF (obligatorio en cada slide)
+- **Texto exacto:** `J-30215603-3`, con guiones y sin la palabra «RIF».
+- **Tipografía:** Futura Book a **~24–28 px** sobre un lienzo de 1080 px de ancho. Es discreto pero legible.
+- **Color:**
+  - Gris medio (~#9A9A9A) sobre fondos claros.
+  - Blanco al 60–70 % de opacidad sobre fotos, oscuros o naranja.
+- **Posición (lo que usa la cuenta):**
+  - Abajo a la izquierda, a ~100–130 px del borde inferior.
+  - O abajo al centro, debajo del «Desliza hacia un lado ➜».
+  - O en vertical pegado al borde derecho o izquierdo cuando la parte de abajo está ocupada.
+  - Siempre dentro de la zona segura: en stories, fuera de los ~250 px inferiores donde Instagram pone la barra de respuesta.
+- **Videos y reels:** el RIF va fijo durante todo el video o, como mínimo, en la portada y en el cierre con logo.
+- Cuida que no choque con el logo ni con la numeración de slides, y que no quede tapado por stickers.
 
 ### 5.7 Evolución
 - **2023–2024:** fondos blancos o gris claro, bloques naranja sólidos redondeados, íconos lineales naranja, logo arriba y la serie «Spoilers». Es más plano y corporativo.
@@ -158,7 +173,8 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 - [ ] ¿Educa o previene en vez de vender? ¿Va sin precios?
 - [ ] ¿Titular de máximo 2–3 líneas, con una palabra clave en bold o naranja?
 - [ ] ¿Futura (Book y Heavy), naranja #FA7322, gris #A8A9AD y texto blanco sobre foto?
-- [ ] ¿Logo LC&A abajo al centro y RIF J-30215603-3 en pequeño?
+- [ ] ¿**RIF J-30215603-3 en cada slide**, sin excepción (portada, interiores, cierre, cada story)?
+- [ ] ¿Logo LC&A abajo al centro?
 - [ ] ¿Dato con fuente si hay estadística?
 - [ ] ¿Toque local o real (Barquisimeto, aliado, equipo) cuando aplica?
 - [ ] ¿Stories con una interacción (encuesta, pregunta o cierto/falso)?
