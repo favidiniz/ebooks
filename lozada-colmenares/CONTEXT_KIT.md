@@ -98,14 +98,20 @@ Salen del Plan de Contenidos 2026 y del feedback que dejó el cliente en los doc
 - Tiene versión **a color** (letras grises y swoosh naranja) sobre claro, y **blanca con swoosh naranja** sobre foto u oscuro.
 - Va casi siempre **centrado abajo** y pequeño (~20 % del ancho). En stories de 2023–24 y en algunas de 2026 va **arriba al centro**.
 - **Versión 50 años** (2023): «LC&A» con un «50» superíndice.
-- ⚠️ La carpeta **no tiene el archivo del logo en vector** (ASSETS solo tiene un acceso directo a «TryAngle»). Conviene pedir el AI/SVG/PNG transparente.
+- **Archivos del logo → [`logo/`](logo/)** (SVG vectorial + PNG transparente de 2400 px):
+  - `LCA_logo_color`: letras y swoosh superior en gris **#ADADAD**, swoosh inferior y «Corretaje de Seguros C.A» en naranja **#EC6C2D**. Va sobre fondos claros.
+  - `LCA_logo_blanco_naranja`: blanco con swoosh naranja. Va sobre fotos o fondos oscuros.
+  - `LCA_logo_blanco`: todo blanco. Va sobre naranja o fotos con mucho color.
+  - `LCA_logo_negro`: monocromo carbón #45413E.
+  - `LCA_isotipo_*`: solo «LC&A» con los swooshes, sin el texto (color, blanco con naranja, blanco).
+  - ⚠️ Es una **reconstrucción**: se vectorizó a partir de las piezas publicadas (story de aniversario de sep 2026, la versión más grande, de ~600 px). Los colores se tomaron de las piezas a color de 2023 y 2026. Sirve para producir, pero el AI/SVG original del cliente sería lo ideal.
 
 ### 5.2 Paleta
 
 | Uso | Color | HEX aprox. |
 |---|---|---|
-| **Naranja LC&A** (principal) | naranja vibrante | **#FA7322** (moodboard 2026) · en piezas se ve entre #F27D37 y #E07E3D |
-| **Gris LC&A** (secundario) | gris plata | **#A8A9AD** |
+| **Naranja LC&A** (principal) | naranja vibrante | **#FA7322** (moodboard 2026) · el del logo es **#EC6C2D** · en las piezas varía entre #F27D37 y #E07E3D |
+| **Gris LC&A** (secundario) | gris plata | **#A8A9AD** (moodboard) · el del logo es **#ADADAD** |
 | Texto oscuro / carbón | gris cálido casi negro | #45413E |
 | Fondos claros | blanco roto / papel | #F6F6F6 · #FFFFFF |
 | Fondos oscuros | negro o carbón con foto desenfocada | #1E1E1E aprox. |
@@ -161,7 +167,7 @@ El naranja es el que manda. El gris acompaña el logo y los detalles. El texto v
 ---
 
 ## 7. Pendientes y huecos detectados
-- Falta el **logo en vector** y las fuentes en la carpeta ASSETS.
+- Falta el **logo original en vector** (se reconstruyó uno a partir de las piezas, ver `logo/`) y las fuentes en la carpeta ASSETS.
 - La carpeta **EXPERTOS** de la raíz está vacía (los videos de expertos están dentro de cada mes).
 - Hay ~1.700 videos (MOV/MP4) que no se revisaron cuadro a cuadro. Solo se revisaron guiones y shotlists.
 - Hay un documento sin título en `2026/AGOSTO/STORIES` con texto legal de condominio (fachadas). No parece contenido de redes.
