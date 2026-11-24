@@ -39,7 +39,9 @@
 | Premium | **Premium Pillow top** | Cubierta superior de alta gama, acogida envolvente, sensación de ingravidez. *Suite de cinco estrellas.* | Individual, matrimonial, queen, king |
 | Premium | **Premium Doble Pillow top** | Doble capa de acolchado premium en ambas caras, “sensación de nube bidireccional”, maximiza la vida útil. *Una experiencia de lujo total y descanso sin fronteras.* | Individual, matrimonial, queen, king |
 
-Todos son **ortopédicos**. El catálogo no trae medidas en cm (dice “0 x 0 cm”): **no inventes centímetros, precios ni años de garantía**.
+Todos son **ortopédicos**. El catálogo no trae medidas en cm (dice “0 x 0 cm”): **no inventes centímetros ni precios**.
+
+**Garantía:** la clienta confirmó **10 años de garantía** (línea Premium; su etiqueta dice “Años de garantía”). La etiqueta real del **San Remo** dice **6 años**. Si un post habla de garantía sin aclarar la línea, confirmar con la clienta.
 
 ### Fotos de estudio → modelo (identificación por forma/color; confirmar con la clienta si hay duda)
 - **DSC_7166**: Premium Doble Pillow top (gris, grueso, pillow top doble).
@@ -51,7 +53,7 @@ Todos son **ortopédicos**. El catálogo no trae medidas en cm (dice “0 x 0 cm
 - Versiones web ya recortadas (sin fondo, sin hilos de estudio): `carrusel-imperia/assets/mXXXX.webp`.
 
 ### Etiquetas reales (la IA SIEMPRE las inventa; hay que reemplazarlas)
-- **Premium:** etiqueta negra, “IMPERIA” en dorado, “Premium” en cursiva, corona y “Años de garantía”. Tela lateral gris con malla blanca en rombos y costura en hexágonos, ribete negro.
+- **Premium:** etiqueta negra, “IMPERIA” en dorado, “Premium” en cursiva, corona y “Años de garantía” (**10 años**). Tela lateral gris con malla blanca en rombos y costura en hexágonos, ribete negro.
 - **San Remo:** etiqueta plateada/blanca, logo con corona “COLCHONES IMPERIA”, franja dorada “SAN REMO”, “6 años de garantía · Ortopédico · Resortes / Pillow”.
 - Recortes reales listos: `contexto/referencias/etiquetas-reales/premium.png` y `san-remo.png`.
 
