@@ -71,7 +71,7 @@ button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);ou
     </ol>
     <div class="rules">
       <div><b>Siempre ficticios</b>Nunca usar fotos ni nombres de personas reales como referencia de cara.</div>
-      <div><b>Sin colchones genéricos</b>Camas con edredón y sábanas que cubran todo; el colchón no se ve. Si debe verse, se usa la foto real de Imperia.</div>
+      <div><b>Siempre colchones Imperia</b>Gente usando el colchón de verdad, con estilo de foto de usuario. En cada prompt se sube como referencia la foto real del colchón Imperia.</div>
       <div><b>Rasgos fijos, ropa libre</b>La cara, el cabello y la edad no cambian. El vestuario se adapta a cada campaña, en la paleta de la marca: blanco, crema, negro y toques dorados.</div>
       <div><b>Niños</b>Siempre con su familia, vestidos, en escenas cotidianas y cálidas.</div>
     </div>
@@ -80,15 +80,15 @@ button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);ou
   <section class="cast" id="cast"></section>
   <section class="box" id="fiestas">
     <div class="lbl">Campaña de fiestas · antes del 15 de diciembre</div>
-    <h2>Escenas para los 4 carruseles</h2>
-    <p class="lead" style="margin:0 0 6px">Genera cada escena con Soul 2.0 y el Soul ID del personaje, en formato 4:5. Mándamelas con el nombre del carrusel y el slide, y las pongo en lugar de las fotos de las polas.</p>
+    <h2>Fotos de usuario para los 4 carruseles</h2>
+    <p class="lead" style="margin:0 0 6px">Personas usando colchones Imperia de verdad, con estilo de foto de celular. En Higgsfield elige <b>Nano Banana Pro</b>, sube dos referencias (la hoja de casting del personaje y la foto del colchón indicada) y pega el prompt. Puedes variar planos, poses y ángulos. Las portadas van claras y luminosas.</p>
     <div id="fx"></div>
   </section>
 </div>
 
 <script>
 const STYLE = "Photorealistic, natural skin texture, soft warm window light, editorial lifestyle photography, cream, white and black palette with subtle gold accents, shallow depth of field. Fictional person with an original face, not resembling any real person or celebrity.";
-const NOBED = "The bed is fully covered by a white duvet and sheets; no mattress edge visible.";
+const NOBED = "The mattress must be exactly the Imperia mattress from the reference image (same quilting, side fabric and label) and clearly visible.";
 const cast = [
   { name:"Valeria", role:"Descanso y bienestar · la voz principal", img:"assets/casting/valeria-frente.jpg", sheet:"assets/casting/valeria-pola.jpg",
     facts:{Edad:"27 años",Rasgos:"Latina, piel trigueña clara, ojos marrón oscuro, cejas naturales, pecas suaves en nariz y mejillas",Cabello:"Castaño oscuro, largo y liso, raya al medio",Estilo:"Natural, poco maquillaje, camisetas de tirantes negras o pijama de seda crema, collar fino dorado"},
@@ -138,31 +138,41 @@ const FACE={
  Camila:"Camila, 32-year-old Latina woman, warm tan skin, honey-brown eyes, wide friendly smile, wavy mid-back brown hair with honey highlights, small gold hoop earrings",
  Herrera:"The Herrera family: Mariana, 34, fair skin, brown hair in a low bun; Andrés, 36, olive skin, dark wavy hair, short beard; Sofía, 6, straight brown hair with bangs; baby Lucía, 4 months, with a small white bow headband"
 };
-const HOL="Festive season mood without explicit Christmas symbols: warm golden fairy-light bokeh in the background, soft evening or morning light. ";
+const UGC="Authentic user-generated photo, shot on a phone, natural candid moment, bright airy bedroom with daylight, light cream walls, white and cream bedding, subtle warm string lights in the background for the festive season (no explicit Christmas symbols). The mattress must be exactly the Imperia mattress from the reference image: same quilting pattern, side fabric, piping and label, clearly visible in the shot. The person must match the reference casting sheet exactly. Vertical 4:5.";
+const MAT={
+ "7166":"Premium Doble Pillow top (foto DSC_7166 de su Drive: tapa blanca acolchada, laterales gris)",
+ "7163":"Premium Pillow top (foto DSC_7163)",
+ "7213":"San Remo Pillow top blanco (foto DSC_7213)",
+ "7276":"San Remo Doble Pillow top negro (foto DSC_7276)"
+};
 const FX=[
  ["Valeria · Diciembre también se descansa","Valeria",[
-   ["Slide 1 · reemplaza el arco","Wearing an oversized cream cable-knit sweater and thin gold necklace, sitting cross-legged on a bed holding a warm mug with both hands, calm soft smile looking at camera."],
-   ["Slide 3 · siesta","Napping on a bed in the afternoon, eyes closed, wearing beige knit loungewear, cream throw blanket, soft winter window light."],
-   ["Slide 4 · junto a la cita","Sitting on a bed in black silk pajamas with a small gift box wrapped in gold paper on her lap, serene smile."]]],
+   ["Portada (clara)","7166","Lying on her stomach across the mattress with only a fitted white sheet on it, propped on her elbows, smiling at the camera, oversized cream knit sweater and thin gold necklace, warm mug on the nightstand, the mattress side and gold label visible."],
+   ["Slide 2 · agenda","7213","Sitting cross-legged on the mattress writing in a planner, cream cardigan, relaxed afternoon light, the white quilted side of the mattress visible."],
+   ["Slide 3 · siesta","7166","Taking a nap on her side on the mattress with a cream throw blanket over her legs, eyes closed, soft afternoon light, the grey quilted side panel and label visible in the foreground."],
+   ["Slide 4 · cierre","7163","Sitting on the edge of the mattress in black silk pajamas, pressing the pillow top with one hand and smiling, a small gift box wrapped in gold paper beside her."]]],
  ["Camila · El regalo de 365 noches","Camila",[
-   ["Slide 1 · reemplaza el arco","Laughing at the camera, holding a gift box wrapped in cream paper with a large gold satin ribbon, wearing a black ribbed turtleneck, cozy living room."],
-   ["Slide 4 · junto a la cita","Selfie-style shot, giving a thumbs up and smiling, wearing a cream knit sweater with a gold gift tag in her other hand, cozy bedroom."]]],
+   ["Portada (clara)","7166","Selfie-style shot kneeling on a brand new mattress that has a big gold satin ribbon tied around it, excited open-mouth smile, black ribbed turtleneck, bright living room."],
+   ["Slide 2 · 365 noches","7213","Lying on her back across the mattress laughing with arms open, hair spread out, white sweatshirt, shot from above."],
+   ["Slide 4 · cierre","7166","Sitting on the mattress giving a thumbs up to the camera, holding a gold gift tag, cream knit sweater, the mattress label visible."]]],
  ["Herrera · La casa se llena","Herrera",[
-   ["Slide 1 · reemplaza la foto de grupo","The family preparing the guest room together: Mariana folding white sheets, Andrés carrying a cream blanket, Sofía placing a pillow, baby Lucía in a bassinet nearby. Cream and white knitwear."],
-   ["Slide 2 · junto a la lista","Close-up of Mariana in a cream knit cardigan placing folded white towels and a small gold-wrapped chocolate on a neatly made guest bed."],
-   ["Slide 4 · reemplaza los círculos","Mariana and Andrés smiling at an open front door, ready to welcome guests, wearing cream and camel knit sweaters, warm entrance lights."]]],
+   ["Portada (clara)","7213","The family getting the guest room ready: Mariana and Sofía stretching a white fitted sheet over the bare mattress, Andrés holding two pillows and laughing, baby Lucía watching from a bassinet; cream and white knitwear."],
+   ["Slide 2 · la lista","7213","Mariana sitting on the edge of the bare mattress pressing it with her palm to test it, a stack of folded white towels next to her, cream cardigan."],
+   ["Slide 3 · que duerman como en casa","7276","Sofía sitting on the black mattress with a white fitted sheet half on, hugging a pillow and smiling, Andrés placing a folded blanket at the foot."],
+   ["Slide 4 · cierre","7213","Mariana and Andrés sitting side by side on the freshly made guest bed (mattress side and label visible below the sheets), smiling at each other, cream and camel sweaters."]]],
  ["Herrera · Vacaciones en la cama grande","Herrera",[
-   ["Slide 1 · reemplaza la foto de grupo","The whole family laughing together on a large bed in matching cream and black striped pajamas, Sofía bouncing, baby Lucía on Andrés's chest, bright morning light."],
-   ["Slide 2 · sobre el colchón","Breakfast in bed: Mariana and Sofía sharing pancakes from a wooden tray, Andrés holding Lucía, cream pajamas, slow morning light."],
-   ["Slide 4 · reemplaza los círculos","Sofía reading a picture book to baby Lucía on a big bed, both in white pajamas, soft morning light."]]]
+   ["Portada (clara)","7166","The whole family on a king-size mattress in matching cream and black striped pajamas, Sofía bouncing on the mattress, baby Lucía on Andrés's chest, Mariana laughing, bright morning light, the mattress side and label clearly visible."],
+   ["Slide 2 · mañanas lentas","7166","Breakfast on the mattress: Mariana and Sofía sharing pancakes from a wooden tray, Andrés holding Lucía, cream pajamas, slow morning light."],
+   ["Slide 3 · para que quepan todos","7166","Top-down shot of the four of them lying side by side across the king mattress, smiling at the camera, white and cream pajamas."],
+   ["Slide 4 · cierre","7166","Sofía reading a picture book to baby Lucía, both lying on the mattress in white pajamas, soft morning light, the quilted pillow top visible."]]]
 ];
 const fx=document.getElementById('fx');
 FX.forEach(([title,who,items],gi)=>{
   const h=document.createElement('h3'); h.textContent=title; h.style.cssText='font-family:var(--f-display);font-size:26px;margin:22px 0 4px'; fx.appendChild(h);
-  items.forEach(([t,sc],ii)=>{
-    const id=`fx-${gi}-${ii}`; const full=`${FACE[who]}. ${sc} ${HOL}${NOBED} ${STYLE}`;
+  items.forEach(([t,mat,sc],ii)=>{
+    const id=`fx-${gi}-${ii}`; const full=`${FACE[who]}. ${sc} ${UGC}`;
     const d=document.createElement('details');
-    d.innerHTML=`<summary>${t}</summary><div class="pr"><pre id="${id}"></pre><div class="meta">Soul 2.0 · 4:5 · con el Soul ID de ${who==='Herrera'?'cada miembro de la familia':who}</div><button class="copy" data-t="${id}">Copiar prompt</button></div>`;
+    d.innerHTML=`<summary>${t}</summary><div class="pr"><pre id="${id}"></pre><div class="meta">Nano Banana Pro · 4:5 · referencias: la hoja de casting de ${who==='Herrera'?'la familia Herrera':who} + ${MAT[mat]}</div><button class="copy" data-t="${id}">Copiar prompt</button></div>`;
     d.querySelector('pre').textContent=full; fx.appendChild(d);
   });
 });
