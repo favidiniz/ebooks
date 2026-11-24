@@ -46,6 +46,9 @@ details[open] summary::after{content:"–"}
 .pr{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px}
 .pr pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--f-mono);font-size:12.5px;line-height:1.55;color:var(--ink)}
 .meta{font-size:12px;color:var(--muted)}
+.p h3 .ok,.p h3 .pend{font:700 11px var(--f-body);letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:4px 10px;vertical-align:middle;margin-left:8px}
+.p h3 .ok{background:#2F7A4B;color:#fff}
+.p h3 .pend{border:1px solid var(--line);color:var(--muted)}
 button.copy{align-self:flex-start;font:600 13px var(--f-body);background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
 button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style>
@@ -81,7 +84,7 @@ button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);ou
 const STYLE = "Photorealistic, natural skin texture, soft warm window light, editorial lifestyle photography, cream, white and black palette with subtle gold accents, shallow depth of field. Fictional person with an original face, not resembling any real person or celebrity.";
 const NOBED = "The bed is fully covered by a white duvet and sheets; no mattress edge visible.";
 const cast = [
-  { name:"Valeria", role:"Descanso y bienestar · la voz principal",
+  { name:"Valeria", role:"Descanso y bienestar · la voz principal", img:"assets/casting/valeria-frente.jpg", sheet:"assets/casting/valeria-pola.jpg",
     facts:{Edad:"27 años",Rasgos:"Latina, piel trigueña clara, ojos marrón oscuro, cejas naturales, pecas suaves en nariz y mejillas",Cabello:"Castaño oscuro, largo y liso, raya al medio",Estilo:"Natural, poco maquillaje, camisetas de tirantes negras o pijama de seda crema, collar fino dorado"},
     use:["Posts de descanso","Hábitos de sueño","Rutina de mañana y noche"],
     base:"27-year-old Latina woman, light olive skin, dark brown eyes, natural brows, soft freckles across nose and cheeks, long straight dark brown hair with a middle part, minimal makeup, thin gold necklace",
@@ -109,8 +112,11 @@ cast.forEach((c,ci)=>{
   const el=document.createElement('article'); el.className='p';
   const facts=Object.entries(c.facts).map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
   const sc=c.scenes.map(([t,s],si)=>{const full=`${c.base}. ${s} ${STYLE}`;return `<details${si===0?' open':''}><summary>${t}</summary><div class="pr"><pre id="pr-${ci}-${si}">${full}</pre><div class="meta">Soul 2.0 · ${si===0?'3:4 · sin Soul ID':'4:5 o 3:4 · con el Soul ID de '+c.name}</div><button class="copy" data-t="pr-${ci}-${si}">Copiar prompt</button></div></details>`}).join('');
-  el.innerHTML=`<div class="pola"><div class="ph">Aquí va su pola cuando la generes en Higgsfield</div><div class="nm">${c.name}</div></div>
-  <div><h3>${c.name}</h3><p class="role">${c.role}</p><dl class="facts">${facts}</dl><div class="use">${c.use.map(u=>`<span>${u}</span>`).join('')}</div>${sc}</div>`;
+  const ph = c.img ? `<img src="${c.img}" alt="Pola de ${c.name}" style="display:block;width:100%;aspect-ratio:3/4;object-fit:cover">` : `<div class="ph">Aquí va su pola cuando la generes en Higgsfield</div>`;
+  const status = c.img ? `<span class="ok">Pola aprobada</span>` : `<span class="pend">Pola pendiente</span>`;
+  const sheet = c.sheet ? `<details><summary>Hoja de casting aprobada</summary><div class="pr"><img src="${c.sheet}" alt="Hoja de casting de ${c.name}: frente, tres cuartos, perfil y cuerpo entero" style="width:100%;border-radius:8px"><div class="meta">Referencia oficial. Úsala para crear su Soul ID en Higgsfield.</div></div></details>` : '';
+  el.innerHTML=`<div class="pola">${ph}<div class="nm">${c.name}</div></div>
+  <div><h3>${c.name} ${status}</h3><p class="role">${c.role}</p><dl class="facts">${facts}</dl><div class="use">${c.use.map(u=>`<span>${u}</span>`).join('')}</div>${sheet}${sc}</div>`;
   host.appendChild(el);
 });
 host.addEventListener('click',async e=>{
