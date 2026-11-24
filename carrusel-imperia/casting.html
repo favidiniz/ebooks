@@ -72,12 +72,18 @@ button.copy:focus-visible,summary:focus-visible{outline:2px solid var(--gold);ou
     <div class="rules">
       <div><b>Siempre ficticios</b>Nunca usar fotos ni nombres de personas reales como referencia de cara.</div>
       <div><b>Sin colchones genéricos</b>Camas con edredón y sábanas que cubran todo; el colchón no se ve. Si debe verse, se usa la foto real de Imperia.</div>
-      <div><b>Paleta de marca</b>Blanco, crema, negro y toques dorados. Sábanas blancas o negras, como en sus posts.</div>
+      <div><b>Rasgos fijos, ropa libre</b>La cara, el cabello y la edad no cambian. El vestuario se adapta a cada campaña, en la paleta de la marca: blanco, crema, negro y toques dorados.</div>
       <div><b>Niños</b>Siempre con su familia, vestidos, en escenas cotidianas y cálidas.</div>
     </div>
   </section>
 
   <section class="cast" id="cast"></section>
+  <section class="box" id="fiestas">
+    <div class="lbl">Campaña de fiestas · antes del 15 de diciembre</div>
+    <h2>Escenas para los 4 carruseles</h2>
+    <p class="lead" style="margin:0 0 6px">Genera cada escena con Soul 2.0 y el Soul ID del personaje, en formato 4:5. Mándamelas con el nombre del carrusel y el slide, y las pongo en lugar de las fotos de las polas.</p>
+    <div id="fx"></div>
+  </section>
 </div>
 
 <script>
@@ -124,6 +130,47 @@ host.addEventListener('click',async e=>{
   const pre=document.getElementById(b.dataset.t);
   try{await navigator.clipboard.writeText(pre.textContent); b.textContent='Copiado';}
   catch(err){const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Texto seleccionado: cópialo';}
+  setTimeout(()=>b.textContent='Copiar prompt',1800);
+});
+
+const FACE={
+ Valeria:"Valeria, 27-year-old Latina woman, light olive skin, dark brown eyes, natural brows, soft freckles across nose and cheeks, long straight dark brown hair with a middle part",
+ Camila:"Camila, 32-year-old Latina woman, warm tan skin, honey-brown eyes, wide friendly smile, wavy mid-back brown hair with honey highlights, small gold hoop earrings",
+ Herrera:"The Herrera family: Mariana, 34, fair skin, brown hair in a low bun; Andrés, 36, olive skin, dark wavy hair, short beard; Sofía, 6, straight brown hair with bangs; baby Lucía, 4 months, with a small white bow headband"
+};
+const HOL="Festive season mood without explicit Christmas symbols: warm golden fairy-light bokeh in the background, soft evening or morning light. ";
+const FX=[
+ ["Valeria · Diciembre también se descansa","Valeria",[
+   ["Slide 1 · reemplaza el arco","Wearing an oversized cream cable-knit sweater and thin gold necklace, sitting cross-legged on a bed holding a warm mug with both hands, calm soft smile looking at camera."],
+   ["Slide 3 · siesta","Napping on a bed in the afternoon, eyes closed, wearing beige knit loungewear, cream throw blanket, soft winter window light."],
+   ["Slide 4 · junto a la cita","Sitting on a bed in black silk pajamas with a small gift box wrapped in gold paper on her lap, serene smile."]]],
+ ["Camila · El regalo de 365 noches","Camila",[
+   ["Slide 1 · reemplaza el arco","Laughing at the camera, holding a gift box wrapped in cream paper with a large gold satin ribbon, wearing a black ribbed turtleneck, cozy living room."],
+   ["Slide 4 · junto a la cita","Selfie-style shot, giving a thumbs up and smiling, wearing a cream knit sweater with a gold gift tag in her other hand, cozy bedroom."]]],
+ ["Herrera · La casa se llena","Herrera",[
+   ["Slide 1 · reemplaza la foto de grupo","The family preparing the guest room together: Mariana folding white sheets, Andrés carrying a cream blanket, Sofía placing a pillow, baby Lucía in a bassinet nearby. Cream and white knitwear."],
+   ["Slide 2 · junto a la lista","Close-up of Mariana in a cream knit cardigan placing folded white towels and a small gold-wrapped chocolate on a neatly made guest bed."],
+   ["Slide 4 · reemplaza los círculos","Mariana and Andrés smiling at an open front door, ready to welcome guests, wearing cream and camel knit sweaters, warm entrance lights."]]],
+ ["Herrera · Vacaciones en la cama grande","Herrera",[
+   ["Slide 1 · reemplaza la foto de grupo","The whole family laughing together on a large bed in matching cream and black striped pajamas, Sofía bouncing, baby Lucía on Andrés's chest, bright morning light."],
+   ["Slide 2 · sobre el colchón","Breakfast in bed: Mariana and Sofía sharing pancakes from a wooden tray, Andrés holding Lucía, cream pajamas, slow morning light."],
+   ["Slide 4 · reemplaza los círculos","Sofía reading a picture book to baby Lucía on a big bed, both in white pajamas, soft morning light."]]]
+];
+const fx=document.getElementById('fx');
+FX.forEach(([title,who,items],gi)=>{
+  const h=document.createElement('h3'); h.textContent=title; h.style.cssText='font-family:var(--f-display);font-size:26px;margin:22px 0 4px'; fx.appendChild(h);
+  items.forEach(([t,sc],ii)=>{
+    const id=`fx-${gi}-${ii}`; const full=`${FACE[who]}. ${sc} ${HOL}${NOBED} ${STYLE}`;
+    const d=document.createElement('details');
+    d.innerHTML=`<summary>${t}</summary><div class="pr"><pre id="${id}"></pre><div class="meta">Soul 2.0 · 4:5 · con el Soul ID de ${who==='Herrera'?'cada miembro de la familia':who}</div><button class="copy" data-t="${id}">Copiar prompt</button></div>`;
+    d.querySelector('pre').textContent=full; fx.appendChild(d);
+  });
+});
+fx.addEventListener('click',async e=>{
+  const b=e.target.closest('button.copy'); if(!b) return;
+  const pre=document.getElementById(b.dataset.t);
+  try{await navigator.clipboard.writeText(pre.textContent); b.textContent='Copiado';}
+  catch(err){const r=document.createRange(); r.selectNodeContents(pre); const sl=getSelection(); sl.removeAllRanges(); sl.addRange(r); b.textContent='Texto seleccionado: cópialo';}
   setTimeout(()=>b.textContent='Copiar prompt',1800);
 });
 </script>
